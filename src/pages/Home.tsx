@@ -8,14 +8,14 @@ const games = [
     {
         id: 'race',
         title: '끝까지 가야대',
-        description: '심장 쫄깃한 달리기 경주!',
+        description: '끝까지 모르는 도파민 맥스 달리기 경주.',
         icon: <Flag size={32} />,
         color: '#FF6B6B'
     },
     {
         id: 'ladder',
         title: '사다리 타기',
-        description: '운명은 이미 정해졌다',
+        description: '빠라바라밤빰~ 빠라바라밤빰~ 사다리타자~',
         icon: <GitMerge size={32} />,
         color: '#4ECDC4'
     },
@@ -29,7 +29,7 @@ const games = [
     {
         id: 'team',
         title: '팀 나누기',
-        description: '공정하고 깔끔한 팀 배정',
+        description: '내전하고 싶을 땐 슈웃~~',
         icon: <Users size={32} />,
         color: '#96CEB4'
     },
