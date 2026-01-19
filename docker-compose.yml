@@ -1,0 +1,7 @@
+services:
+  coffee-loser:
+    build: .
+    container_name: coffee-loser
+    restart: unless-stopped
+    ports:
+      - "5003:5003"

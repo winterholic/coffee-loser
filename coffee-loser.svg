@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="64" fill="#FF8A00"></rect>
+
+  <!-- Coffee Cup -->
+  <g transform="translate(156 92)">
+    <!-- Cup Body -->
+    <rect x="0" y="80" width="200" height="180" rx="24" fill="#FFFFFF"></rect>
+    <rect x="0" y="140" width="200" height="60" fill="#C68642"></rect>
+
+    <!-- Lid -->
+    <rect x="-10" y="40" width="220" height="50" rx="25" fill="#F2F2F2"></rect>
+
+    <!-- Face -->
+    </g></svg>
