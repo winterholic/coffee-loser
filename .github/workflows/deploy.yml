@@ -9,7 +9,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy via SSH
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy files to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "."
+          target: "/home/winterholic/projects/services/coffee-loser"
+          overwrite: true
+
+      - name: Build and deploy
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -18,7 +32,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/winterholic/projects/services/coffee-loser
-            git pull origin main
             docker compose down
             docker compose up -d --build
             docker image prune -f
