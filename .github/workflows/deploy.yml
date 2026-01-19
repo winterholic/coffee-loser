@@ -32,6 +32,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/winterholic/projects/services/coffee-loser
-            docker compose down
+            docker compose down || true
             docker compose up -d --build
             docker image prune -f
