@@ -1,7 +1,7 @@
 services:
   coffee-loser:
     build: .
-    container_name: coffee-loser
+    container_name: coffee-loser-react
     restart: unless-stopped
     ports:
       - "5003:5003"
